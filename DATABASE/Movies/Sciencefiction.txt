@@ -1,0 +1,39 @@
+1)Movie Name  : Gravity
+  Director    : Alfonso Cuarón
+  Runtime     : 1h 31m
+  IMDb Rating : 7.7/10
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #41
+
+2)Movie Name  : Tenet
+  Director    : Christopher Nolan
+  Runtime     : 2h 30m
+  IMDb Rating : 7.3/10
+  Rent        : Rs 400/month
+  Buy         : Rs 500
+  Movie ID    : #42
+
+3)Movie Name  : The Adam Project
+  Director    : Shawn Levy
+  Runtime     : 1h 46m
+  IMDb Rating : 6.7/10
+  Rent        : Rs 100/month
+  Buy         : Rs 180
+  Movie ID    : #43
+
+4)Movie Name  : The Martian
+  Director    : Ridley Scott
+  Runtime     : 2h 22m
+  IMDb Rating : 8/10
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #44
+
+5)Movie Name  : The Tomorrow War
+  Director    : Chris McKay
+  Runtime     : 2h 20m
+  IMDb Rating : 6.5/10 
+  Rent        : Rs 150/month
+  Buy         : Rs 250
+  Movie ID    : #45

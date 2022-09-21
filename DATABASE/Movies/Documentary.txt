@@ -1,0 +1,39 @@
+1)Movie Name  : An Insignificant Man
+  Director    : Khushboo Ranka, Vinay Shukla
+  Runtime     : 1h 36m
+  IMDb Rating : 8.6/10
+  Rent        : Rs 200/month
+  Buy         : Rs 300
+  Movie ID    : #21
+
+2)Movie Name  : Beyond All Boundaries
+  Director    : Sushrut Jain
+  Runtime     : 1h 37m
+  IMDb Rating : 8/10
+  Rent        : Rs 150/month
+  Buy         : Rs 250
+  Movie ID    : #22
+
+3)Movie Name  : Bombay: Our City
+  Director    : Anand Patwardhan
+  Runtime     : 1h 15m
+  IMDb Rating : 8.1/10
+  Rent        : Rs 150/month
+  Buy         : Rs 250
+  Movie ID    : #23
+
+4)Movie Name  : Gulabi Gang
+  Director    : Nishtha Jain
+  Runtime     : 1h 36m
+  IMDb Rating : 7.6/10
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #24
+
+5)Movie Name  : Sachin: A Billion Dreams
+  Director    : James Erskine
+  Runtime     : 2h 18m
+  IMDb Rating : 8.5/10
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #25

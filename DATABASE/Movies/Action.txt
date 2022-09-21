@@ -1,0 +1,39 @@
+1)Movie Name  : Doctor Strange
+  Director    : Scott Derrickson
+  Runtime     : 1h 55m
+  IMDb Rating : 7.5/10 
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #1
+
+2)Movie Name  : Fast and Furious 9
+  Director    : Justin Lin
+  Runtime     : 2h 23m
+  IMDb Rating : 5.2/10 
+  Rent        : Rs 180/month
+  Buy         : Rs 300
+  Movie ID    : #2
+
+3)Movie Name  : K.G.F ch-2
+  Director    : Prashanth Neel
+  Runtime     : 2h 35m
+  IMDb Rating : 8.6/10 
+  Rent        : Rs 100/month
+  Buy         : Rs 150
+  Movie ID    : #3
+
+4)Movie Name  : Morbius
+  Director    : Daniel Espinosa
+  Runtime     : 1h 48m
+  IMDb Rating : 6/10 
+  Rent        : Rs 390/month
+  Buy         : Rs 500
+  Movie ID    : #4
+
+5)Movie Name  : Pushpa:The Rise
+  Director    : Sukumar
+  Runtime     : 2h 59m
+  IMDb Rating : 7.6/10 
+  Rent        : Rs 200/month
+  Buy         : Rs 350 
+  Movie ID    : #5

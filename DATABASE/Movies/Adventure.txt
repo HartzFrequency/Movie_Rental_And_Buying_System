@@ -1,0 +1,39 @@
+1)Movie Name  : Fantastic Beasts: The Secrets of Dumbledore
+  Director    : David Yates
+  Runtime     : 2h 23m
+  IMDb Rating : 6.3/10
+  Rent        : Rs 500/month
+  Buy         : Rs 580
+  Movie ID    : #6
+
+2)Movie Name  : Jungle Cruise
+  Director    : Jaume Collet-Serra
+  Runtime     : 2h 7m
+  IMDb Rating : 6.6/10
+  Rent        : Rs 160/month
+  Buy         : Rs 250
+  Movie ID    : #7
+
+3)Movie Name  : Jurassic World: Fallen Kingdom
+  Director    : J. A. Bayona
+  Runtime     : 2h 9m
+  IMDb Rating : 6.1/10
+  Rent        : Rs 140/month
+  Buy         : Rs 200
+  Movie ID    : #8
+
+4)Movie Name  : Spider-Man: No Way Home
+  Director    : Jon Watts
+  Runtime     : 2h 28m
+  IMDb Rating : 8.3/10
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #9
+
+5)Movie Name  : Uncharted
+  Director    : Ruben Fleischer
+  Runtime     : 1h 56m
+  IMDb Rating : 6.4/10
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #10

@@ -1,0 +1,39 @@
+1)Movie Name  : Gangubai Kathiawadi
+  Director    : Sanjay Leela Bhansali
+  Runtime     : 2h 34m
+  IMDb Rating : 7/10
+  Rent        : Rs 100/month
+  Buy         : Rs 200
+  Movie ID    : #26
+
+2)Movie Name  : Jersey
+  Director    : Gowtam Tinnanuri
+  Runtime     : 2h 50m
+  IMDb Rating : 7.3/10
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #27
+
+3)Movie Name  : Legend
+  Director    : Brian Helgeland
+  Runtime     : 2h 12m
+  IMDb Rating : 6.9/10
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #28
+
+4)Movie Name  : Shiddat
+  Director    : Kunal Deshmukh
+  Runtime     : 2h 26m
+  IMDb Rating : 7.7/10
+  Rent        : Rs 150/month
+  Buy         : Rs 250
+  Movie ID    : #29
+
+5)Movie Name  : Super 30
+  Director    : Vikas Bahl
+  Runtime     : 2h 42m
+  IMDb Rating : 7.9/10
+  Rent        : Rs 180/month
+  Buy         : Rs 300
+  Movie ID    : #30

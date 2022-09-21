@@ -1,0 +1,39 @@
+1)Movie Name  : Glass
+  Director    : M. Night Shyamalan
+  Runtime     : 2h 9m
+  IMDb Rating : 6.6/10
+  Rent        : Rs 160/month
+  Buy         : Rs 250
+  Movie ID    : #46
+
+2)Movie Name  : Haseen Dillruba
+  Director    : Vinil Mathew
+  Runtime     : 2h 16m
+  IMDb Rating : 6.9/10
+  Rent        : Rs 170/month
+  Buy         : Rs 250
+  Movie ID    : #47
+
+3)Movie Name  : Khuda Haafiz
+  Director    : Faruk Kabir
+  Runtime     : 2h 14m
+  IMDb Rating : 7.2/10
+  Rent        : Rs 50/month
+  Buy         : Rs 150
+  Movie ID    : #48
+
+4)Movie Name  : Mission: Impossible - Fallout
+  Director    : Christopher McQuarrie
+  Runtime     : 2h 28m
+  IMDb Rating : 7.7/10
+  Rent        : Rs 100/month
+  Buy         : Rs 180
+  Movie ID    : #49
+
+5)Movie Name  : The Conjuring: The Devil Made Me Do It
+  Director    : Michael Chaves
+  Runtime     : 1h 52m
+  IMDb Rating : 6.3/10
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #50

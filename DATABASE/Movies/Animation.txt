@@ -1,0 +1,39 @@
+1)Movie Name  : How to Train Your Dragon: The Hidden World
+  Director    : Dean DeBlois
+  Runtime     : 1h 44m
+  IMDb Rating : 7.4/10
+  Rent        : Rs 140/month
+  Buy         : Rs 200
+  Movie ID    : #11
+
+2)Movie Name  : Incredibles 2
+  Director    : Brad Bird
+  Runtime     : 1h 58m
+  IMDb Rating : 7.6/10
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #12
+
+3)Movie Name  : Madagascar 3: Europe's Most Wanted
+  Director    : Tom McGrath, Eric Darnell, Conrad Vernon
+  Runtime     : 1h 35m
+  IMDb Rating : 6.8/10
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #13
+
+4)Movie Name  : Ratatouille
+  Director    : Brad Bird
+  Runtime     : 1h 51m
+  IMDb Rating : 8.1/10
+  Rent        : Rs 150/month
+  Buy         : Rs 250
+  Movie ID    : #14
+
+5)Movie Name  : The Angry Birds Movie
+  Director    : Clay Kaytis, Fergal Reilly
+  Runtime     : 1h 37m
+  IMDb Rating : 6.2/10
+  Rent        : Rs 100/month
+  Buy         : Rs 180
+  Movie ID    : #15

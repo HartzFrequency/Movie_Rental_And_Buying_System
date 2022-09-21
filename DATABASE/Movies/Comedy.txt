@@ -1,0 +1,39 @@
+1)Movie Name  : Golmaal 3
+  Director    : Rohit Shetty
+  Runtime     : 2h 35m
+  IMDb Rating : 5.5/10 
+  Rent        : Rs 110/month
+  Buy         : Rs 180
+  Movie ID    : #16
+
+2)Movie Name  : Housefull 4
+  Director    : arhad Samji
+  Runtime     : 2h 30m
+  IMDb Rating : 3.5/10 
+  Rent        : Rs 100/month
+  Buy         : Rs 200
+  Movie ID    : #17
+
+3)Movie Name  : Hungama 2
+  Director    : Priyadarshan
+  Runtime     : 2h 36m
+  IMDb Rating : 3.2/10 
+  Rent        : Rs 80/month
+  Buy         : Rs 150
+  Movie ID    : #18
+
+4)Movie Name  : Red Notice
+  Director    : Rawson Marshall Thurber
+  Runtime     : 1h 58m
+  IMDb Rating : 6.3/10 
+  Rent        : Rs 200/month
+  Buy         : Rs 300
+  Movie ID    : #19
+
+5)Movie Name  : The Lost City
+  Director    : Aaron Nee, Adam Nee
+  Runtime     : 1h 52m
+  IMDb Rating : 6.2/10 
+  Rent        : Rs 390/month
+  Buy         : Rs 500
+  Movie ID    : #20

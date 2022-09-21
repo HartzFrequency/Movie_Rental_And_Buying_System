@@ -1,0 +1,39 @@
+1)Movie Name  : Annabelle Comes Home
+  Director    : Gary Dauberman
+  Runtime     : 1h 46m
+  IMDb Rating : 5.9/10
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #31
+
+2)Movie Name  : IT
+  Director    : Andres Muschietti
+  Runtime     : 2h 15m
+  IMDb Rating : 7.3/10
+  Rent        : Rs 150/month
+  Buy         : Rs 250
+  Movie ID    : #32
+
+3)Movie Name  : Malignant
+  Director    : James Wan
+  Runtime     : 1h 51m
+  IMDb Rating : 6.2/10
+  Rent        : Rs 450/month
+  Buy         : Rs 600
+  Movie ID    : #33
+
+4)Movie Name  : Resident Evil: Welcome to Raccoon City
+  Director    : Johannes Roberts
+  Runtime     : 1h 47m
+  IMDb Rating : 5.2/10
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #34
+
+5)Movie Name  : Scream
+  Director    : Matt Bettinelli-Olpin, Tyler Gillett
+  Runtime     : 1h 54m
+  IMDb Rating : 6.4/10 
+  Rent        : Rs 120/month
+  Buy         : Rs 200
+  Movie ID    : #35
