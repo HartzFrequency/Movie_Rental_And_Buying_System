@@ -4,8 +4,9 @@
 #include <conio.h>   //to use automatic enter and sleep inbuit function
 #include <string>    //exit
 #include <fstream>
+#include <limits>
 #include <stack> //to make cart system and to use in return dvd;
-
+#include <algorithm>
 // int MovieCost;
 using namespace std;
 
@@ -32,8 +33,8 @@ class movie;
 // defined above -> used in member function of class customer
 
 int total()
-{   //finding the total price items in the cart
-    // NOTE: this actually sums the price of buying cacets  
+{ // finding the total price items in the cart
+    // NOTE: this actually sums the price of buying cacets
     int sum(0);
     while (!cart.empty())
     {
@@ -62,7 +63,7 @@ public:
 
 void Customer::MakePayment()
 {
-    //payment page to depict real world buying services
+    // payment page to depict real world buying services
     cout << "\nPRESS ENTER TO CONFIRM YOU ORDER";
     fflush(stdin);
     getchar();
@@ -71,7 +72,7 @@ void Customer::MakePayment()
     Redirecting();
     system("CLS");
 
-    //processing payment page
+    // processing payment page
     cout << "Processing your Payment..";
     for (int i = 0; i < 3; i++)
     {
@@ -82,8 +83,8 @@ void Customer::MakePayment()
     int price = 0;
     price = total();
 
-    //ReWriting Payment in dummy payment file as to make
-    //some payments decline
+    // ReWriting Payment in dummy payment file as to make
+    // some payments decline
     ifstream abstracting_Balance;
     abstracting_Balance.open("DATABASE\\DummyPaymentData\\" + NAME + "bal.txt");
     int balance = 0;
@@ -127,7 +128,7 @@ void Customer::MakePayment()
     }
 }
 
-//constructor setting up the constraints of customer
+// constructor setting up the constraints of customer
 void Customer::setter(string Name)
 {
     cout << "\n";
@@ -136,8 +137,8 @@ void Customer::setter(string Name)
     cin >> Age;
 }
 
-//sign in process
-//if user exists this opens the text files of the user
+// sign in process
+// if user exists this opens the text files of the user
 void Customer::SignIn(string Name)
 {
     NAME = Name;
@@ -148,7 +149,7 @@ void Customer::SignIn(string Name)
     Age = extracted_age;
 }
 
-//sign in process
+// sign in process
 void Customer::SignUp()
 {
     // animation of registering the userr
@@ -159,7 +160,7 @@ void Customer::SignUp()
         Sleep(1000);
     }
 
-    //creating the required files needed to wark;
+    // creating the required files needed to wark;
     cout << "User is successfully registered in our database" << endl;
     Sleep(1000);
     cout << "You can now proceeds further\n";
@@ -187,10 +188,20 @@ class movie
 {
 public:
     virtual void MovieList() = 0;
+    virtual void SpecificMovie(int) = 0;
 };
 // hierarchical inheritance
 // movie -> sub genre
 
+std::fstream &GotoLine(std::fstream &file, unsigned int num)
+{
+    file.seekg(std::ios::beg);
+    for (int i = 0; i < num - 1; ++i)
+    {
+        file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
+    return file;
+}
 // encapsulation
 class Action : public movie
 {
@@ -205,6 +216,19 @@ public:
             cout << Action << endl;
         }
         in.close();
+    }
+    void SpecificMovie(int MovieNumber)
+    {
+        fstream file("DATABASE\\Movies\\Action.txt");
+        GotoLine(file, (MovieNumber - 1) * 8);
+        string print;
+        
+        for (int i = 0; i < 5; i++)
+        {
+            getline(file, print);
+            cout << print << endl;
+        }
+        cout << endl;
     }
 };
 
@@ -221,6 +245,18 @@ public:
         }
         in.close();
     }
+    void SpecificMovie(int MovieNumber)
+    {
+        fstream file("DATABASE\\Movies\\Adventure.txt");
+        GotoLine(file, (MovieNumber - 1) * 8);
+        string print;
+        for (int i = 0; i < 5; i++)
+        {
+            getline(file, print);
+            cout << print << endl;
+        }
+        cout << endl;
+    }
 };
 
 class Animation : public movie
@@ -235,6 +271,18 @@ public:
             cout << Animation << endl;
         }
         in.close();
+    }
+    void SpecificMovie(int MovieNumber)
+    {
+        fstream file("DATABASE\\Movies\\Animation.txt");
+        GotoLine(file, (MovieNumber - 1) * 8);
+        string print;
+        for (int i = 0; i < 5; i++)
+        {
+            getline(file, print);
+            cout << print << endl;
+        }
+        cout << endl;
     }
 };
 
@@ -251,6 +299,18 @@ public:
         }
         in.close();
     }
+    void SpecificMovie(int MovieNumber)
+    {
+        fstream file("DATABASE\\Movies\\Comedy.txt");
+        GotoLine(file, (MovieNumber - 1) * 8);
+        string print;
+        for (int i = 0; i < 5; i++)
+        {
+            getline(file, print);
+            cout << print << endl;
+        }
+        cout << endl;
+    }
 };
 
 class Documentary : public movie
@@ -265,6 +325,18 @@ public:
             cout << Documentary << endl;
         }
         in.close();
+    }
+    void SpecificMovie(int MovieNumber)
+    {
+        fstream file("DATABASE\\Movies\\Documentary.txt");
+        GotoLine(file, (MovieNumber - 1) * 8);
+        string print;
+        for (int i = 0; i < 5; i++)
+        {
+            getline(file, print);
+            cout << print << endl;
+        }
+        cout << endl;
     }
 };
 
@@ -281,6 +353,18 @@ public:
         }
         in.close();
     }
+    void SpecificMovie(int MovieNumber)
+    {
+        fstream file("DATABASE\\Movies\\Drama.txt");
+        GotoLine(file, (MovieNumber - 1) * 8);
+        string print;
+        for (int i = 0; i < 5; i++)
+        {
+            getline(file, print);
+            cout << print << endl;
+        }
+        cout << endl;
+    }
 };
 
 class Horror : public movie
@@ -295,6 +379,18 @@ public:
             cout << Horror << endl;
         }
         in.close();
+    }
+    void SpecificMovie(int MovieNumber)
+    {
+        fstream file("DATABASE\\Movies\\Horror.txt");
+        GotoLine(file, (MovieNumber - 1) * 8);
+        string print;
+        for (int i = 0; i < 5; i++)
+        {
+            getline(file, print);
+            cout << print << endl;
+        }
+        cout << endl;
     }
 };
 
@@ -311,6 +407,18 @@ public:
         }
         in.close();
     }
+    void SpecificMovie(int MovieNumber)
+    {
+        fstream file("DATABASE\\Movies\\Romantic.txt");
+        GotoLine(file, (MovieNumber - 1) * 8);
+        string print;
+        for (int i = 0; i < 5; i++)
+        {
+            getline(file, print);
+            cout << print << endl;
+        }
+        cout << endl;
+    }
 };
 
 class ScienceFiction : public movie
@@ -325,6 +433,18 @@ public:
             cout << SciFi << endl;
         }
         in.close();
+    }
+    void SpecificMovie(int MovieNumber)
+    {
+        fstream file("DATABASE\\Movies\\Sciencefiction.txt");
+        GotoLine(file, (MovieNumber - 1) * 8);
+        string print;
+        for (int i = 0; i < 5; i++)
+        {
+            getline(file, print);
+            cout << print << endl;
+        }
+        cout << endl;
     }
 };
 
@@ -341,10 +461,33 @@ public:
         }
         in.close();
     }
+    void SpecificMovie(int MovieNumber)
+    {
+        fstream file("DATABASE\\Movies\\Thriller.txt");
+        GotoLine(file, (MovieNumber - 1) * 8);
+        string print;
+        for (int i = 0; i < 5; i++)
+        {
+            getline(file, print);
+            cout << print << endl;
+        }
+        cout << endl;
+    }
 };
+// objects of moive claSSES
+Action AC;
+Adventure AD;
+Animation AN;
+Comedy CO;
+Documentary DO;
+Drama DR;
+Horror HO;
+Romantic RO;
+ScienceFiction SF;
+Thriller TH;
 
 // These two functions are clubed
-//Text  Animation  of showing output
+// Text  Animation  of showing output
 void ManageOutput_MCS()
 {
     cout << endl;
@@ -359,7 +502,7 @@ void ManageOutput_MCS()
         Sleep(1000);
     }
 }
-//condition to check a user can buy movies which could be inappropriate for some user
+// condition to check a user can buy movies which could be inappropriate for some user
 int Appropriate_Age_Finder(int x, Customer C)
 {
     int m = C.age();
@@ -373,20 +516,11 @@ int Appropriate_Age_Finder(int x, Customer C)
         return 0;
     }
 }
-//movie choice selector
+// movie choice selector
 void MovieChoiceSelector(int &no, Customer C)
 {
     int x;
-    Action AC;
-    Adventure AD;
-    Animation AN;
-    Comedy CO;
-    Documentary DO;
-    Drama DR;
-    Horror HO;
-    Romantic RO;
-    ScienceFiction SF;
-    Thriller TH;
+
 re_enter_choice:
 start:
     fflush(stdin);
@@ -439,7 +573,7 @@ start:
     }
     cout << endl;
 }
-//Redirecting ANIMATIONS
+// Redirecting ANIMATIONS
 void Redirecting()
 {
     cout << "Re-directing you in ";
@@ -452,9 +586,9 @@ void Redirecting()
     }
     cout << endl;
 }
-//used for internal working of system
-//this actually give the slected movie a unique  identification that 
-// will in future wiil be used to extract movie name
+// used for internal working of system
+// this actually give the slected movie a unique  identification that
+//  will in future wiil be used to extract movie name
 void GivingRightSequence(int &ms)
 {
     if (ms == 1)
@@ -498,7 +632,7 @@ void GivingRightSequence(int &ms)
         ms = 45;
     }
 }
-//writes the movies rented code on the text file
+// writes the movies rented code on the text file
 void movie_on_rent(int movie_code, string name, int n)
 {
     if (n == 2)
@@ -507,7 +641,7 @@ void movie_on_rent(int movie_code, string name, int n)
         fout << movie_code << "\n";
     }
 }
-//sum up the stacck and find total price to be paid
+// sum up the stacck and find total price to be paid
 int movieCostfinder_fromfile(int type, int number)
 {
     if (type == 1)
@@ -540,7 +674,7 @@ int movieCostfinder_fromfile(int type, int number)
         return a;
     }
 }
-//feature to return a book
+// feature to return a book
 void return_feature(string name, int &vapsi)
 {
 a1:
@@ -629,11 +763,112 @@ a1:
         }
     }
 }
-//  a thing to be corrected we can just simply use the modulus to back trace the 
-//  the name of movie 
-//  could be  improved once finding the number and genre 
-//  we can remove switch case 
+//  a thing to be corrected we can just simply use the modulus to back trace the
+//  the name of movie
+//  could be  improved once finding the number and genre
+//  we can remove switch case
 //  by overloading the abstract class
+
+// number of digits finder
+int number_of_digit(int number)
+{
+    int NumOfDigit = 0;
+    if (number == 0)
+        return 1;
+    while (number != 0)
+    {
+        number = number / 10;
+        ++NumOfDigit;
+    }
+    return NumOfDigit;
+}
+
+// function to seperate digits to number
+int get_digits(int *a, int number)
+{
+
+    for (int i = number_of_digit(number); i >= 0; i--)
+    {
+        a[i] = number % 10;
+        number /= 10;
+    }
+}
+
+// function to decode movie genre
+int genre_decoder(int value)
+{
+    int sizeOfarray = number_of_digit(value);
+    int array[sizeOfarray];
+    get_digits(array, value);
+    reverse(array, array + 2);
+    if (sizeOfarray == 1)
+    {
+        if (array[0] > 5)
+            return 2;
+        else
+            return 1;
+    }
+    switch (array[0])
+    {
+    case 1:
+        return 2;
+        break;
+    case 2:
+        if (array[1] == 0 || array[1] > 5)
+        {
+            return 4;
+        }
+        return 3;
+    case 3:
+        if (array[1] == 0 || array[1] > 5)
+        {
+            return 6;
+        }
+        return 5;
+    case 4:
+        if (array[1] == 0 || array[1] > 5)
+        {
+            return 8;
+        }
+        return 7;
+    case 5:
+        if (array[1] == 0 || array[1] > 5)
+        {
+            return 10;
+        }
+        return 9;
+    }
+}
+// function to find movie number
+int number_decoder(int value)
+{
+    int sizeOfarray = number_of_digit(value);
+    int array[sizeOfarray]={0};
+    get_digits(array, value);
+    reverse(array, array + 2);
+    if (sizeOfarray == 1)
+    {
+        if (array[0] < 6)
+            return array[0];
+        else
+            return array[0] - 5;
+    }
+    else if (sizeOfarray == 2)
+    {
+        if (array[1] == 0)
+        {
+            return 5;
+        }
+        else if (array[1] < 6)
+        {
+            return array[1];
+        }
+        else
+        {
+            return array[1] - 5;
+        }
+    }
+}
 void know_your_movie(string naame)
 {
     int value;
@@ -641,168 +876,57 @@ void know_your_movie(string naame)
     showRentMovie.open("users\\" + naame + "MR.txt");
     int indexing = 0;
     cout << endl;
+    cout << "Movie rented by you from us are:" << endl;
     while (showRentMovie >> value)
     {
-        cout << "Movie rented by you from us are:" << endl;
         indexing++;
-        cout << indexing << ")";
-        switch (value)
+        int Decoded_genre = genre_decoder(value);
+        int Decoded_MovieSno = number_decoder(value);
+        switch (Decoded_genre)
         {
         case 1:
-            cout << "Doctor Strange\n";
+
+            AC.SpecificMovie(Decoded_MovieSno);
             break;
         case 2:
-            cout << "Fast and Furious 9\n";
+
+            AD.SpecificMovie(Decoded_MovieSno);
             break;
         case 3:
-            cout << "K.G.F ch-2\n";
+
+            AN.SpecificMovie(Decoded_MovieSno);
             break;
         case 4:
-            cout << "Morbius\n";
+
+            CO.SpecificMovie(Decoded_MovieSno);
             break;
         case 5:
-            cout << "Pushpa:The Rise\n";
+
+            DO.SpecificMovie(Decoded_MovieSno);
             break;
         case 6:
-            cout << "Fantastic Beasts: The Secrets of Dumbledore\n";
+            DR.SpecificMovie(Decoded_MovieSno);
             break;
         case 7:
-            cout << "Jungle Cruise\n";
+
+            HO.SpecificMovie(Decoded_MovieSno);
             break;
         case 8:
-            cout << "Jurassic World: Fallen Kingdom\n";
+
+            RO.SpecificMovie(Decoded_MovieSno);
             break;
         case 9:
-            cout << "Spider-Man: No Way Home\n";
+
+            SF.SpecificMovie(Decoded_MovieSno);
             break;
         case 10:
-            cout << "Uncharted\n";
-            break;
-        case 11:
-            cout << "How to Train Your Dragon: The Hidden World\n";
-            break;
-        case 12:
-            cout << "Incredibles 2\n";
-            break;
-        case 13:
-            cout << "Madagascar 3: Europe's Most Wanted\n";
-            break;
-        case 14:
-            cout << "Ratatouille\n";
-            break;
-        case 15:
-            cout << "The Angry Birds Movie\n";
-            break;
-        case 16:
-            cout << "Golmaal 3\n";
-            break;
-        case 17:
-            cout << "Housefull 4\n";
-            break;
-        case 18:
-            cout << "Hungama 2\n";
-            break;
-        case 19:
-            cout << "Red Notice\n";
-            break;
-        case 20:
-            cout << "The Lost City\n";
-            break;
-        case 21:
-            cout << "An Insignificant Man\n";
-            break;
-        case 22:
-            cout << "Beyond All Boundaries\n";
-            break;
-        case 23:
-            cout << "Bombay: Our City\n";
-            break;
-        case 24:
-            cout << "Gulabi Gang\n";
-            break;
-        case 25:
-            cout << "Sachin: A Billion Dreams\n";
-            break;
-        case 26:
-            cout << "Gangubai Kathiawadi\n";
-            break;
-        case 27:
-            cout << " Jersey\n";
-            break;
-        case 28:
-            cout << "Legend\n";
-            break;
-        case 29:
-            cout << "Shiddat\n";
-            break;
-        case 30:
-            cout << "Super 30\n";
-            break;
-        case 31:
-            cout << "Annabelle Comes Home\n";
-            break;
-        case 32:
-            cout << "IT\n";
-            break;
-        case 33:
-            cout << "Malignant\n";
-            break;
-        case 34:
-            cout << "Resident Evil: Welcome to Raccoon City\n";
-            break;
-        case 35:
-            cout << "Scream\n";
-            break;
-        case 36:
-            cout << "Fifty Shades of Grey \n";
-            break;
-        case 37:
-            cout << "Indecent Proposal\n";
-            break;
-        case 38:
-            cout << "Little Children\n";
-            break;
-        case 39:
-            cout << "Love & Other Drug\n";
-            break;
-        case 40:
-            cout << " The Girl Next Door\n";
-            break;
-        case 41:
-            cout << "Gravity\n";
-            break;
-        case 42:
-            cout << "Tenet\n";
-            break;
-        case 43:
-            cout << "The Adam Project\n";
-            break;
-        case 44:
-            cout << "The Martian\n";
-            break;
-        case 45:
-            cout << "The Tomorrow War\n";
-            break;
-        case 46:
-            cout << "Glass\n";
-            break;
-        case 47:
-            cout << "Haseen Dillruba\n";
-            break;
-        case 48:
-            cout << "Khuda Haafiz\n";
-            break;
-        case 49:
-            cout << "Mission: Impossible - Fallout\n";
-            break;
-        case 50:
-            cout << "The Conjuring: The Devil Made Me Do It\n";
-            break;
-        default:
-            cout << "Error\n";
+
+            TH.SpecificMovie(Decoded_MovieSno);
             break;
         }
     }
+    cout << endl;
+
     if (indexing == 0)
     {
         cout << "You Doesn't Rent any books '-' ";
@@ -814,7 +938,7 @@ void know_your_movie(string naame)
 
 int main()
 {
-    //welcome line
+    // welcome line
     cout << "\t\t||- WELCOME TO MITS VIDEO LIBRARY -||" << endl;
     cout << "\t\t         YOUR MOVIE PARADISE" << endl;
     cout << "PRESS ANY KEY TO CONTINUE";
@@ -833,17 +957,17 @@ SectionA:
     cout << "Click   1 for SIGNUP\n\t2 for SIGNIN\nEnter your Choice: ";
     int sign_choice;
     cin >> sign_choice;
-    //after learing exception handing this is can be removed
+    // after learing exception handing this is can be removed
     if (sign_choice > 2 || sign_choice < 1)
     {
         cout << "Wrong choice\n Enter correct choice: " << endl;
         goto SectionA;
     }
 
-    //sign in process that can automatically done once 
-    //as if file exist data can be extraced from them 
-    //else direct the user in sign up
-    //sign up process includes creating files and writing user info
+    // sign in process that can automatically done once
+    // as if file exist data can be extraced from them
+    // else direct the user in sign up
+    // sign up process includes creating files and writing user info
 
     Customer New;
     if (sign_choice == 1)
@@ -931,9 +1055,9 @@ SectionA:
     }
 
     // section 2
-    //giving userr choices
-    //rewriting files 
-    //making payments
+    // giving userr choices
+    // rewriting files
+    // making payments
     cout << "\nWelcome " << New.name() << "! You can now proceeds further" << endl
          << endl;
     int MovieSequence;
