@@ -1,8 +1,11 @@
 // libraries included in the code
 #include <iostream>
+#include <stdio.h>
+#include <cstdio>
 #include <windows.h> //clean the terminal window
 #include <conio.h>   //to use automatic enter and sleep inbuit function
 #include <string>    //exit
+#include <string.h>
 #include <fstream>
 #include <limits>
 #include <stack> //to make cart system and to use in return dvd;
@@ -174,7 +177,7 @@ void Customer::SignUp()
     sufile.open("users\\" + NAME + "MR.txt");
     sufile.close();
     sufile.open("DATABASE\\DummyPaymentData\\" + NAME + "bal.txt");
-    sufile << 1000;
+    sufile << 3000;
     sufile.close();
     sufile.open("DATABASE\\User_Data\\userdatabase.txt", ios_base::app);
     sufile << NAME << "\n";
@@ -222,7 +225,7 @@ public:
         fstream file("DATABASE\\Movies\\Action.txt");
         GotoLine(file, (MovieNumber - 1) * 8);
         string print;
-        
+
         for (int i = 0; i < 5; i++)
         {
             getline(file, print);
@@ -843,7 +846,7 @@ int genre_decoder(int value)
 int number_decoder(int value)
 {
     int sizeOfarray = number_of_digit(value);
-    int array[sizeOfarray]={0};
+    int array[sizeOfarray] = {0};
     get_digits(array, value);
     reverse(array, array + 2);
     if (sizeOfarray == 1)
@@ -936,6 +939,105 @@ void know_your_movie(string naame)
     exit(0);
 }
 
+// Delete your account feature
+
+// main code to delete user account
+int Delete_your_Account(Customer object)
+{
+    ifstream Dues;
+    Dues.open("users\\" + object.name() + "MR.txt");
+    if (!Dues)
+    {
+        // file failed to open
+        cout << "Oops! error occured" << endl;
+        return -1;
+    }
+    int flag = 0;
+    Dues.seekg(0, ios::end);
+    if (Dues.tellg() == 0)
+    {
+        flag = 1;
+    }
+    if (flag)
+    {
+        // movie rented by user text file is empty
+        // remove function return 0 when delteion is success
+        // remove only allow char
+
+        // removing username file
+        string way = "users\\" + object.name() + ".txt";
+        int size = way.length();
+        char path[size + 1];
+        strcpy(path, way.c_str());
+        remove(path);
+
+        // removing user age file
+        way = "users\\" + object.name() + "age.txt";
+        size = way.length();
+        char path_age[size + 1];
+        strcpy(path_age, way.c_str());
+        remove(path_age);
+
+        Dues.close();
+
+        // rmeoving movie rented file
+        way = "users\\" + object.name() + "MR.txt";
+        size = way.length();
+        char path_mr[size + 1];
+        strcpy(path_mr, way.c_str());
+        remove(path_mr);
+
+        // deleting recipt
+        way = "DATABASE\\DummyPaymentData\\" + object.name() + "bal.txt";
+        size = way.length();
+        char path_pay[size + 1];
+        strcpy(path_pay, way.c_str());
+        remove(path_pay);
+
+        // deleting reci[t]
+        way = "Receipt\\" + object.name() + "_receipt.txt";
+        size = way.length();
+        char path_r[size + 1];
+        strcpy(path_r, way.c_str());
+        remove(path_r);
+
+        // copying the data of user database except deleted accounnt name
+        stack<string> tempstorage;
+        ifstream database;
+        database.open("DATABASE\\User_Data\\userdatabase.txt", ios_base::app);
+        database.seekg(0, ios::beg);
+        string user_namez;
+        while (getline(database, user_namez))
+        {
+            if (user_namez == object.name())
+            { // skipping writing user name
+            }
+            else if (user_namez == "")
+            { // skipping writing white  spaces
+            }
+            else
+            {
+                tempstorage.push(user_namez);
+            }
+        }
+        database.close();
+        ofstream database2;
+        database2.open("DATABASE\\User_Data\\userdatabase.txt");
+        while (!tempstorage.empty())
+        {
+            database2 << tempstorage.top() << endl;
+            tempstorage.pop();
+        }
+        database2.close();
+        return 1;
+    }
+    else
+    {
+        Dues.close();
+        return 0;
+    }
+}
+
 int main()
 {
     // welcome line
@@ -1019,7 +1121,7 @@ SectionA:
         }
         if (user_available == 0)
         {
-            cout << "Entered user name is not available in database" << endl;
+            cout << "\nEntered user name is not available in database" << endl;
             Sleep(500);
             int x;
             cout << "!!This username seems incorrect" << endl;
@@ -1054,6 +1156,7 @@ SectionA:
         New.SignIn(username);
     }
 
+    login.close();
     // section 2
     // giving userr choices
     // rewriting files
@@ -1062,11 +1165,14 @@ SectionA:
          << endl;
     int MovieSequence;
 faalana_dhikana:
+failed_deletion_redirection:
+failed_account_deletion_dueTOdues:
     fflush(stdin);
     cout << "What you want to perform:" << endl;
     cout << "1:Return Item" << endl;
     cout << "2:Buy or Rent" << endl;
     cout << "3:Know what movie you rent" << endl;
+    cout << "4:Delete your account" << endl;
     cout << "Enter choice: ";
     int BRR;
     fflush(stdin);
@@ -1080,11 +1186,47 @@ faalana_dhikana:
             goto section2_BRR;
         }
     }
+    else if (BRR == 4)
+    {
+        int account_deletion = Delete_your_Account(New);
+        if (account_deletion == 1)
+        {
+            cout << endl
+                 << "Deleting your information ";
+            for (int i = 0; i < 4; i++)
+            {
+                cout << ". ";
+                Sleep(1000);
+            }
+            cout << endl
+                 << "your account is successfully Deleted" << endl;
+            cout << "Feel free to give us feedback" << endl;
+            cout << "thanks! for using our services '-' bye!\n"
+                 << endl;
+            exit(0);
+        }
+        else if (account_deletion == -1)
+        {
+            cout << endl
+                 << "Sorry! for the inconvience " << endl;
+            cout << "Please try again" << endl;
+            goto failed_deletion_redirection;
+        }
+        else
+        {
+            cout << endl
+                 << "Your Account can't be deleted " << endl;
+            cout << "Please! clear your dues first" << endl;
+            cout << "till then use our other services\n"
+                 << endl;
+            goto failed_account_deletion_dueTOdues;
+        }
+    }
     else if (BRR == 3)
     {
         know_your_movie(New.name());
     }
-    if (BRR != 1 && BRR != 2 && BRR != 3)
+    if (BRR != 1 && BRR != 2 && BRR != 3 && BRR != 4)
     {
         cout << "Wrong input chooose right\n";
         goto faalana_dhikana;
@@ -1099,7 +1241,7 @@ section2_BRR:
 
 section2_MN:
     fflush(stdin);
-    cout << "\nEnter Movie Number: ";
+    cout << "\nEnter Movie Number [one at a time]: ";
     cin >> choose;
     if (choose < 1 || choose > 5)
     {
