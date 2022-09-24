@@ -1,0 +1,8 @@
+features to be ADDED --
+1.clear dues 
+2.add money 
+4.giving some discount  if renting or buying for first time (only happens if transaction file is empty)
+
+things to be learnt --
+1. exception handling
+2. binary io in file system
