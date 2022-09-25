@@ -1173,6 +1173,7 @@ failed_account_deletion_dueTOdues:
     cout << "2:Buy or Rent" << endl;
     cout << "3:Know what movie you rent" << endl;
     cout << "4:Delete your account" << endl;
+    cout << "5:EXIT" << endl;
     cout << "Enter choice: ";
     int BRR;
     fflush(stdin);
@@ -1185,6 +1186,10 @@ failed_account_deletion_dueTOdues:
         {
             goto section2_BRR;
         }
+    }
+    else if (BRR == 5)
+    {
+        exit(0);
     }
     else if (BRR == 4)
     {
@@ -1226,9 +1231,9 @@ failed_account_deletion_dueTOdues:
     {
         know_your_movie(New.name());
     }
-    if (BRR != 1 && BRR != 2 && BRR != 3 && BRR != 4)
+    if (BRR <1 || BRR >5)
     {
-        cout << "Wrong input chooose right\n";
+        cout << "\nWrong input chooose right \n";
         goto faalana_dhikana;
     }
 section2:
