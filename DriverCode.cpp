@@ -191,7 +191,7 @@ class movie
 {
 public:
     virtual void MovieList() = 0;
-    virtual void SpecificMovie(int) = 0;
+    virtual void SpecificMovie(int,int) = 0;
 };
 // hierarchical inheritance
 // movie -> sub genre
@@ -220,7 +220,7 @@ public:
         }
         in.close();
     }
-    void SpecificMovie(int MovieNumber)
+    void SpecificMovie(int MovieNumber,int indexing_element)
     {
         fstream file("DATABASE\\Movies\\Action.txt");
         GotoLine(file, (MovieNumber - 1) * 8);
@@ -229,7 +229,13 @@ public:
         for (int i = 0; i < 5; i++)
         {
             getline(file, print);
-            cout << print << endl;
+            if (i==0)
+            {
+                print[0]=indexing_element;    
+                cout << print <<endl;
+            }
+            else
+                cout << print << endl;
         }
         cout << endl;
     }
@@ -248,15 +254,21 @@ public:
         }
         in.close();
     }
-    void SpecificMovie(int MovieNumber)
+    void SpecificMovie(int MovieNumber,int indexing_element)
     {
         fstream file("DATABASE\\Movies\\Adventure.txt");
         GotoLine(file, (MovieNumber - 1) * 8);
         string print;
         for (int i = 0; i < 5; i++)
         {
-            getline(file, print);
-            cout << print << endl;
+            getline(file,print);
+            if (i==0)
+            {
+                print[0]=indexing_element;    
+                cout << print <<endl;
+            }
+            else
+                cout << print << endl;
         }
         cout << endl;
     }
@@ -275,7 +287,7 @@ public:
         }
         in.close();
     }
-    void SpecificMovie(int MovieNumber)
+    void SpecificMovie(int MovieNumber,int indexing_element)
     {
         fstream file("DATABASE\\Movies\\Animation.txt");
         GotoLine(file, (MovieNumber - 1) * 8);
@@ -283,7 +295,13 @@ public:
         for (int i = 0; i < 5; i++)
         {
             getline(file, print);
-            cout << print << endl;
+            if (i==0)
+            {
+                print[0]=indexing_element;    
+                cout << print <<endl;
+            }
+            else
+                cout << print << endl;
         }
         cout << endl;
     }
@@ -302,7 +320,7 @@ public:
         }
         in.close();
     }
-    void SpecificMovie(int MovieNumber)
+    void SpecificMovie(int MovieNumber,int indexing_element)
     {
         fstream file("DATABASE\\Movies\\Comedy.txt");
         GotoLine(file, (MovieNumber - 1) * 8);
@@ -310,7 +328,13 @@ public:
         for (int i = 0; i < 5; i++)
         {
             getline(file, print);
-            cout << print << endl;
+            if (i==0)
+            {
+                print[0]=indexing_element;    
+                cout << print <<endl;
+            }
+            else
+                cout << print << endl;
         }
         cout << endl;
     }
@@ -329,7 +353,7 @@ public:
         }
         in.close();
     }
-    void SpecificMovie(int MovieNumber)
+    void SpecificMovie(int MovieNumber,int indexing_element)
     {
         fstream file("DATABASE\\Movies\\Documentary.txt");
         GotoLine(file, (MovieNumber - 1) * 8);
@@ -337,7 +361,13 @@ public:
         for (int i = 0; i < 5; i++)
         {
             getline(file, print);
-            cout << print << endl;
+            if (i==0)
+            {
+                print[0]=indexing_element;    
+                cout << print <<endl;
+            }
+            else
+                cout << print << endl;
         }
         cout << endl;
     }
@@ -356,7 +386,7 @@ public:
         }
         in.close();
     }
-    void SpecificMovie(int MovieNumber)
+    void SpecificMovie(int MovieNumber,int indexing_element)
     {
         fstream file("DATABASE\\Movies\\Drama.txt");
         GotoLine(file, (MovieNumber - 1) * 8);
@@ -364,7 +394,13 @@ public:
         for (int i = 0; i < 5; i++)
         {
             getline(file, print);
-            cout << print << endl;
+            if (i==0)
+            {
+                print[0]=indexing_element;    
+                cout << print <<endl;
+            }
+            else
+                cout << print << endl;
         }
         cout << endl;
     }
@@ -383,7 +419,7 @@ public:
         }
         in.close();
     }
-    void SpecificMovie(int MovieNumber)
+    void SpecificMovie(int MovieNumber,int indexing_element)
     {
         fstream file("DATABASE\\Movies\\Horror.txt");
         GotoLine(file, (MovieNumber - 1) * 8);
@@ -391,7 +427,13 @@ public:
         for (int i = 0; i < 5; i++)
         {
             getline(file, print);
-            cout << print << endl;
+            if (i==0)
+            {
+                print[0]=indexing_element;    
+                cout << print <<endl;
+            }
+            else
+                cout << print << endl;
         }
         cout << endl;
     }
@@ -410,7 +452,7 @@ public:
         }
         in.close();
     }
-    void SpecificMovie(int MovieNumber)
+    void SpecificMovie(int MovieNumber,int indexing_element)
     {
         fstream file("DATABASE\\Movies\\Romantic.txt");
         GotoLine(file, (MovieNumber - 1) * 8);
@@ -418,7 +460,13 @@ public:
         for (int i = 0; i < 5; i++)
         {
             getline(file, print);
-            cout << print << endl;
+            if (i==0)
+            {
+                print[0]=indexing_element;    
+                cout << print <<endl;
+            }
+            else
+                cout << print << endl;
         }
         cout << endl;
     }
@@ -437,7 +485,7 @@ public:
         }
         in.close();
     }
-    void SpecificMovie(int MovieNumber)
+    void SpecificMovie(int MovieNumber,int indexing_element)
     {
         fstream file("DATABASE\\Movies\\Sciencefiction.txt");
         GotoLine(file, (MovieNumber - 1) * 8);
@@ -445,7 +493,13 @@ public:
         for (int i = 0; i < 5; i++)
         {
             getline(file, print);
-            cout << print << endl;
+            if (i==0)
+            {
+                print[0]=indexing_element;    
+                cout << print <<endl;
+            }
+            else
+                cout << print << endl;
         }
         cout << endl;
     }
@@ -464,7 +518,7 @@ public:
         }
         in.close();
     }
-    void SpecificMovie(int MovieNumber)
+    void SpecificMovie(int MovieNumber,int indexing_element)
     {
         fstream file("DATABASE\\Movies\\Thriller.txt");
         GotoLine(file, (MovieNumber - 1) * 8);
@@ -472,7 +526,13 @@ public:
         for (int i = 0; i < 5; i++)
         {
             getline(file, print);
-            cout << print << endl;
+            if (i==0)
+            {
+                print[0]=indexing_element;    
+                cout << print <<endl;
+            }
+            else
+                cout << print << endl;
         }
         cout << endl;
     }
@@ -645,6 +705,7 @@ void movie_on_rent(int movie_code, string name, int n)
     }
 }
 // sum up the stacck and find total price to be paid
+// type referse as the what you what to do buy or rent
 int movieCostfinder_fromfile(int type, int number)
 {
     if (type == 1)
@@ -677,6 +738,28 @@ int movieCostfinder_fromfile(int type, int number)
         return a;
     }
 }
+// handlinng price deduction frmt dummy payment
+void movie_return_recipt(string name, int rentbe_paid)
+{
+    ifstream in;
+    in.open("DATABASE\\DummyPaymentData\\" + name + "bal.txt");
+    int last_amount;
+    in >> last_amount;
+    in.close();
+    ofstream out;
+    out.open("DATABASE\\DummyPaymentData\\" + name + "bal.txt");
+    out << last_amount - rentbe_paid;
+    out.close();
+
+    ofstream writing_Receipt;
+    writing_Receipt.open("Receipt\\" + name + "_receipt.txt", ios_base::out);
+    writing_Receipt << name << " Thanks! for clearing your dues" << endl;
+    writing_Receipt << "transaction made succesfully" << endl
+                    << endl;
+    writing_Receipt << "AMOUNT PAID: " << rentbe_paid << endl;
+    writing_Receipt.close();
+}
+
 // feature to return a book
 void return_feature(string name, int &vapsi)
 {
@@ -739,13 +822,29 @@ a1:
         User_rented_movie.pop();
     }
     x.close();
-    if (condition == 0)
+
+    cout << endl
+         << "connecting to bank for clearing dues " << endl
+         << "paying dues " << endl;
+    for (int i = 0; i < 4; i++)
+    {
+        cout << ". ";
+        Sleep(1000);
+    }
+    int rent_to_be_paid;
+    // there is a catvh that after entering
+    // movie number it shows the price of one less movie hence always use the function with +1
+    rent_to_be_paid = movieCostfinder_fromfile(2, movie_number + 1);
+    cout << rent_to_be_paid << endl;
+    movie_return_recipt(name, rent_to_be_paid);
+    cout << "Dues cleared" << endl;
+    if (!condition)
     {
         cout << "Thanks for Returning movie\n";
         cout << "You are now no more subjected to Rents anymore\n";
     reenter:
         fflush(stdin);
-        cout << "Do you want to buy or rent more?\n1]YES\t\t2]NO\nEnter: ";
+        cout << "Do you want to buy or rent more?\n1]YES\t\t2]NO\nEnter command as string: ";
         string answer;
         cin >> answer;
         cout << endl;
@@ -772,103 +871,82 @@ a1:
 //  we can remove switch case
 //  by overloading the abstract class
 
-// number of digits finder
-int number_of_digit(int number)
-{
-    int NumOfDigit = 0;
-    if (number == 0)
-        return 1;
-    while (number != 0)
-    {
-        number = number / 10;
-        ++NumOfDigit;
-    }
-    return NumOfDigit;
-}
-
-// function to seperate digits to number
-int get_digits(int *a, int number)
-{
-
-    for (int i = number_of_digit(number); i >= 0; i--)
-    {
-        a[i] = number % 10;
-        number /= 10;
-    }
-}
-
 // function to decode movie genre
 int genre_decoder(int value)
-{
-    int sizeOfarray = number_of_digit(value);
-    int array[sizeOfarray];
-    get_digits(array, value);
-    reverse(array, array + 2);
-    if (sizeOfarray == 1)
+{    
+    if (value>0&&value<10)
     {
-        if (array[0] > 5)
+        if (value > 5)
             return 2;
         else
             return 1;
     }
-    switch (array[0])
+    int Once_place = value%10;
+    int Tens_place = value/10;
+    switch (Tens_place)
     {
     case 1:
-        return 2;
+        if (Once_place==0)
+            return 2;
+        else if(Once_place>5)
+            return 4;
+        else
+            return 3;
         break;
     case 2:
-        if (array[1] == 0 || array[1] > 5)
-        {
+        if (Once_place==0)
             return 4;
-        }
-        return 3;
-    case 3:
-        if (array[1] == 0 || array[1] > 5)
-        {
+        else if(Once_place>5)
             return 6;
-        }
-        return 5;
-    case 4:
-        if (array[1] == 0 || array[1] > 5)
-        {
+        else
+            return 5;
+        break;
+    case 3:
+        if (Once_place==0)
+            return 6;
+        else if(Once_place>5)
             return 8;
-        }
-        return 7;
-    case 5:
-        if (array[1] == 0 || array[1] > 5)
-        {
+        else
+            return 7;
+        break;
+    case 4:
+        if (Once_place==0)
+            return 8;
+        else if(Once_place>5)
             return 10;
-        }
-        return 9;
+        else
+            return 9;
+    case 5:
+        if (Once_place==0)
+            return 10;
+        break;
     }
 }
 // function to find movie number
 int number_decoder(int value)
 {
-    int sizeOfarray = number_of_digit(value);
-    int array[sizeOfarray] = {0};
-    get_digits(array, value);
-    reverse(array, array + 2);
-    if (sizeOfarray == 1)
+    int Once_place = value%10;
+    int Tens_place = value/10;
+    if (value>0&&value<10)
     {
-        if (array[0] < 6)
-            return array[0];
+        if (value > 5)
+            return value-5;
         else
-            return array[0] - 5;
+            return value;
     }
-    else if (sizeOfarray == 2)
+    else
     {
-        if (array[1] == 0)
+        if (Once_place == 0)
         {
             return 5;
         }
-        else if (array[1] < 6)
+        else if (Once_place > 5)
         {
-            return array[1];
+            return Once_place-5;
         }
         else
         {
-            return array[1] - 5;
+            return Once_place;
         }
     }
 }
@@ -889,42 +967,42 @@ void know_your_movie(string naame)
         {
         case 1:
 
-            AC.SpecificMovie(Decoded_MovieSno);
+            AC.SpecificMovie(Decoded_MovieSno,indexing);
             break;
         case 2:
 
-            AD.SpecificMovie(Decoded_MovieSno);
+            AD.SpecificMovie(Decoded_MovieSno,indexing);
             break;
         case 3:
 
-            AN.SpecificMovie(Decoded_MovieSno);
+            AN.SpecificMovie(Decoded_MovieSno,indexing);
             break;
         case 4:
 
-            CO.SpecificMovie(Decoded_MovieSno);
+            CO.SpecificMovie(Decoded_MovieSno,indexing);
             break;
         case 5:
 
-            DO.SpecificMovie(Decoded_MovieSno);
+            DO.SpecificMovie(Decoded_MovieSno,indexing);
             break;
         case 6:
-            DR.SpecificMovie(Decoded_MovieSno);
+            DR.SpecificMovie(Decoded_MovieSno,indexing);
             break;
         case 7:
 
-            HO.SpecificMovie(Decoded_MovieSno);
+            HO.SpecificMovie(Decoded_MovieSno,indexing);
             break;
         case 8:
 
-            RO.SpecificMovie(Decoded_MovieSno);
+            RO.SpecificMovie(Decoded_MovieSno,indexing);
             break;
         case 9:
 
-            SF.SpecificMovie(Decoded_MovieSno);
+            SF.SpecificMovie(Decoded_MovieSno,indexing);
             break;
         case 10:
 
-            TH.SpecificMovie(Decoded_MovieSno);
+            TH.SpecificMovie(Decoded_MovieSno,indexing);
             break;
         }
     }
@@ -1220,8 +1298,17 @@ failed_account_deletion_dueTOdues:
         else
         {
             cout << endl
+                 << "something went wrong " << endl
+                 << "Fetching more details " << endl;
+            for (int i = 0; i < 4; i++)
+            {
+                cout << ". ";
+                Sleep(1000);
+            }
+            cout << endl
                  << "Your Account can't be deleted " << endl;
             cout << "Please! clear your dues first" << endl;
+            cout << "You can clear dues by returning the books" << endl;
             cout << "till then use our other services\n"
                  << endl;
             goto failed_account_deletion_dueTOdues;
@@ -1231,7 +1318,7 @@ failed_account_deletion_dueTOdues:
     {
         know_your_movie(New.name());
     }
-    if (BRR <1 || BRR >5)
+    if (BRR < 1 || BRR > 5)
     {
         cout << "\nWrong input chooose right \n";
         goto faalana_dhikana;
