@@ -1119,9 +1119,13 @@ int Delete_your_Account(Customer object)
 int main()
 {
     // welcome line
+    std::cout << "\033[1;33m"; // Set text color to bright yellow
     cout << "\t\t||- WELCOME TO MITS VIDEO LIBRARY -||" << endl;
     cout << "\t\t         YOUR MOVIE PARADISE" << endl;
-    cout << "PRESS ANY KEY TO CONTINUE";
+    std::cout << "\033[0m"; // Reset text color to default
+    std::cout << "\033[1;36m"; // Set text color to bright cyan
+    cout << "PRESS ANY KEY TO CONTINUE" << endl;
+    std::cout << "\033[0m"; // Reset text color to default
     getchar();
     cout << endl;
 
