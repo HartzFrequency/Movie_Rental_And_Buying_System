@@ -1144,7 +1144,8 @@ SectionA:
     // after learing exception handing this is can be removed
     if (sign_choice > 2 || sign_choice < 1)
     {
-        cout << "Wrong choice\n Enter correct choice: " << endl;
+        cout << "Wrong choice\nEnter correct choice: \n " << endl;
+        fflush(stdin);
         goto SectionA;
     }
 
