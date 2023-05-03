@@ -1124,7 +1124,7 @@ int main()
     cout << "\t\t         YOUR MOVIE PARADISE" << endl;
     std::cout << "\033[0m"; // Reset text color to default
     std::cout << "\033[1;36m"; // Set text color to bright cyan
-    cout << "PRESS ANY KEY TO CONTINUE" << endl;
+    cout << "\t\t     PRESS ANY KEY TO CONTINUE" << endl;
     std::cout << "\033[0m"; // Reset text color to default
     getchar();
     cout << endl;
