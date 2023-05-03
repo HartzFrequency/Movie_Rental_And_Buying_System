@@ -1144,7 +1144,9 @@ SectionA:
     // after learing exception handing this is can be removed
     if (sign_choice > 2 || sign_choice < 1)
     {
+        std::cout << "\033[31m"; // set text color to red
         cout << "Wrong choice\nEnter correct choice: \n " << endl;
+        std::cout << "\033[0m"; // reset text color to default
         fflush(stdin);
         goto SectionA;
     }
@@ -1204,10 +1206,12 @@ SectionA:
         }
         if (user_available == 0)
         {
+            std::cout << "\033[31m"; // set text color to red
             cout << "\nEntered user name is not available in database" << endl;
             Sleep(500);
             int x;
-            cout << "!!This username seems incorrect" << endl;
+            cout << "!!This username seems incorrect\n" << endl;
+            std::cout << "\033[0m"; // reset text color to default
         wrng_section1:
             fflush(stdin);
             cout << "1:Re-enter user name" << endl
@@ -1228,7 +1232,9 @@ SectionA:
             }
             else
             {
+                std::cout << "\033[31m"; // set text color to red
                 cout << "Wrong option selected" << endl;
+                std::cout << "\033[0m"; // reset text color to default
                 Redirecting();
                 cout << endl;
                 goto wrng_section1;
@@ -1325,7 +1331,9 @@ failed_account_deletion_dueTOdues:
     }
     if (BRR < 1 || BRR > 5)
     {
+        std::cout << "\033[31m"; // set text color to red
         cout << "\nWrong input chooose right \n";
+        std::cout << "\033[0m"; // reset text color to default
         goto faalana_dhikana;
     }
 section2:
@@ -1342,7 +1350,10 @@ section2_MN:
     cin >> choose;
     if (choose < 1 || choose > 5)
     {
+        std::cout << "\033[31m"; // set text color to red
         cout << "Enter valid movie number:\n";
+        std::cout << "\033[0m"; // reset text color to default
+
         goto section2_MN;
     }
 
@@ -1354,7 +1365,9 @@ section2_BR:
     cin >> BR;
     if (BR != 1 && BR != 2)
     {
+        std::cout << "\033[31m"; // set text color to red
         cout << "Wrong choice :( \n";
+        std::cout << "\033[0m"; // reset text color to default
         goto section2_BR;
     }
     cart.push(movieCostfinder_fromfile(BR, MovieSequence + 1));
