@@ -40,4 +40,4 @@ Contributions to the project are welcome. If you find any bugs or issues, please
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. See the `LICENSE` file for details.;
