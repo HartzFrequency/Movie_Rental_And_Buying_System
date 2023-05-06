@@ -1,6 +1,6 @@
 # Movie Rental and Buying System
 
-This project is a movie rental and buying system implemented in C++. The system allows users to browse a catalog of movies, rent and buy movies, manage their rentals and purchases, and store user data using file handling. The program also includes sign up and sign in features and is implemented using object-oriented programming (OOP) methodology.
+This project is a movie rental and buying system implemented in Cpp. The system allows users to browse a catalog of movies, rent and buy movies, manage their rentals and purchases, and store user data using file handling. The program also includes sign up and sign in features and is implemented using object-oriented programming (OOP) methodology.
 
 ## Features
 
