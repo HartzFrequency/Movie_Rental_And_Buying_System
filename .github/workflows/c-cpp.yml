@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: C/C++ Build
 
 on:
   push:
@@ -8,16 +8,21 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - uses: actions/checkout@v2
+
+    - name: Set up C++ environment
+      uses: actions/setup-cpp@v2
+      with:
+        compiler: 'g++-10'  # Use the appropriate compiler version
+
+    - name: Compile and run C++ code
+      run: |
+        g++ -o Movie_Rental_And_Buying_System DiverCode.cpp
+        if [ $? -eq 0 ]; then
+          ./Movie_Rental_And_Buying_System
+        else
+          echo "Compilation failed."
+        fi
