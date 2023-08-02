@@ -21,3 +21,4 @@ jobs:
         else
           echo "Compilation failed."
         fi
+      working-directory: ${{ github.workspace }}
