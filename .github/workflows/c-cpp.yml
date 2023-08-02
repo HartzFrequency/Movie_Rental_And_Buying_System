@@ -13,11 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up C++ environment
-      uses: actions/setup-cpp@v2
-      with:
-        compiler: 'g++-10'  # Use the appropriate compiler version
-
     - name: Compile and run C++ code
       run: |
         g++ -o Movie_Rental_And_Buying_System DiverCode.cpp
