@@ -6,7 +6,7 @@ This project is a movie rental and buying system implemented in Cpp. The system 
 
 Some of the key features of the system include:
 
-- Browse movies by genre, release date, and popularity.
+- Browse movies by genre, Release date, and Popularity.
 - Rent movies for a specified period of time.
 - Buy movies for unlimited access.
 - Manage rentals and purchases through a user dashboard.
