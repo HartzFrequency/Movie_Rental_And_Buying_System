@@ -27,7 +27,7 @@ To install and run the system on your local machine, follow these steps:
 
 Once the system is installed and running, you can use the following steps to use the system:
 
-1. Launch the application.
+1. Launch the Application.
 2. Sign up for a new account or sign in to an existing account.
 3. Browse the catalog of movies and select a movie to rent or buy.
 4. Enter your payment information for purchases or rental period for rentals.
