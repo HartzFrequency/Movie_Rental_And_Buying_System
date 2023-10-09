@@ -8,7 +8,7 @@ Some of the key features of the system include:
 
 - Browse movies by genre, Release date, and Popularity.
 - Rent movies for a specified period of time.
-- Buy movies for unlimited access.
+- Buy Movies for unlimited access.
 - Manage rentals and purchases through a user dashboard.
 - Sign up and sign in features for user authentication.
 - Data persistence using file handling.
