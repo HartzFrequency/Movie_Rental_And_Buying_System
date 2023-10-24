@@ -1,0 +1,24 @@
+name: C/C++ Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Compile and run C++ code
+      run: |
+        g++ -o Movie_Rental_And_Buying_System DiverCode.cpp
+        if [ $? -eq 0 ]; then
+          ./Movie_Rental_And_Buying_System
+        else
+          echo "Compilation failed."
+        fi
+      working-directory: ${{ github.workspace }}

@@ -1,16 +1,16 @@
-# Movie Rental and Buying System
+# Movie Rental And Buying System
 
-This project is a movie rental and buying system implemented in C++. The system allows users to browse a catalog of movies, rent and buy movies, manage their rentals and purchases, and store user data using file handling. The program also includes sign up and sign in features and is implemented using object-oriented programming (OOP) methodology.
+This Project is a Movie rental and buying system implemented in C++. The System allows users to browse catalog of movies, rent and buy movies, manage their rentals and purchases, and store user data using file handling. The program also includes sign up and sign in features and is Implemented using Object-Oriented Programming (OOP) methodology.
 
 ## Features
 
 Some of the key features of the system include:
 
-- Browse movies by genre, release date, and popularity.
+- Browse movies by genre, Release date, and Popularity.
 - Rent movies for a specified period of time.
-- Buy movies for unlimited access.
+- Buy Movies for unlimited access.
 - Manage rentals and purchases through a user dashboard.
-- Sign up and sign in features for user authentication.
+- Sign up and Sign in features for user authentication.
 - Data persistence using file handling.
 - Genre access according to your age
 
@@ -27,7 +27,7 @@ To install and run the system on your local machine, follow these steps:
 
 Once the system is installed and running, you can use the following steps to use the system:
 
-1. Launch the application.
+1. Launch the Application.
 2. Sign up for a new account or sign in to an existing account.
 3. Browse the catalog of movies and select a movie to rent or buy.
 4. Enter your payment information for purchases or rental period for rentals.
